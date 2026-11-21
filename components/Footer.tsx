@@ -10,11 +10,8 @@ const enlace = "inline-flex min-h-11 items-center hover:text-naranja";
 const titulo =
   "font-titulo text-sm font-bold uppercase tracking-widest text-hueso/70";
 
-/** El año se calcula una vez y se guarda en caché, para no bloquear la compilación estática. */
-async function Anio() {
-  "use cache";
-  return new Date().getFullYear();
-}
+/** El sitio es estático: el año se fija en cada compilación. */
+const ANIO = new Date().getFullYear();
 
 export function Footer() {
   const instagram = urlInstagram();
@@ -122,7 +119,7 @@ export function Footer() {
       </Container>
       <div className="border-t border-gris-calido/40">
         <Container className="py-5 text-sm text-hueso/70">
-          © <Anio /> The Bear AI. Todos los derechos reservados.
+          © {ANIO} The Bear AI. Todos los derechos reservados.
         </Container>
       </div>
     </footer>

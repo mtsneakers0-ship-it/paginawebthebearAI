@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Sitio 100 % estático: se exporta a /out y Cloudflare lo sirve como archivos.
+  output: "export",
+  trailingSlash: true,
   turbopack: {
     rules: {
       "*.css": {

@@ -3,6 +3,7 @@ import { ImageResponse } from "next/og";
 export const alt = "The Bear AI · El oso que no hiberna";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const dynamic = "force-static"; // requerido por output: "export"
 
 export default function ImagenOpenGraph() {
   return new ImageResponse(
