@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ConMarcadores } from "@/components/Marcadores";
+import { CONTACTO } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Aviso de privacidad",
@@ -37,7 +38,7 @@ const secciones: { titulo: string; parrafos: string[] }[] = [
   {
     titulo: "Tus derechos",
     parrafos: [
-      "Puedes acceder, rectificar o cancelar tus datos, u oponerte a su uso (derechos ARCO). También puedes revocar tu consentimiento en cualquier momento. Para hacerlo, escríbenos a [CORREO] y te respondemos en un plazo máximo de 20 días hábiles.",
+      `Puedes acceder, rectificar o cancelar tus datos, u oponerte a su uso (derechos ARCO). También puedes revocar tu consentimiento en cualquier momento. Para hacerlo, escríbenos a ${CONTACTO.correo} y te respondemos en un plazo máximo de 20 días hábiles.`,
     ],
   },
   {
